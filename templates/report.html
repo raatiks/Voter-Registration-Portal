@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration Report</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Registration Report</h1>
+    </div>
+
+    <div class="nav-links">
+      <a href="{{ url_for('admin') }}">Back to Dashboard</a>
+    </div>
+
+    <div class="table-container">{{ tables[0]|safe }}</div>
+  </body>
+</html>

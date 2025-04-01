@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Voter Registration</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Voter Registration Portal</h1>
+    </div>
+
+    <div class="nav-links">
+      <a href="{{ url_for('admin_login') }}">Admin Login</a>
+    </div>
+
+    <div class="form-container">
+      <h2>Register to Vote</h2>
+      <form action="/register" method="POST">
+        <label>Full Name:</label>
+        <input type="text" name="name" required />
+
+        <label>Voter ID:</label>
+        <input type="text" name="voter_id" required />
+
+        <label>Community:</label>
+        <select name="community">
+          <option value="Remote Community A">Remote Community A</option>
+          <option value="First Nations Reserve">First Nations Reserve</option>
+        </select>
+
+        <button type="submit">Submit Registration</button>
+      </form>
+    </div>
+  </body>
+</html>
